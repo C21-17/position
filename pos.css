@@ -1,0 +1,54 @@
+/* робимо сторінку так, щоб вона могла прокручуватись вниз - перевірка блоку "fixed" */
+  body { 
+    min-height: 3000px; 
+}
+
+/* Налаштування стилю для всіх боксів */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    text-align: center;
+    line-height: 100px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.static {
+    background-color: #33ffad; /* Бірюза */
+}
+
+.relative {
+    background-color: #ffff33; /* Жовтий */
+    position: relative;
+    top: 70px;
+    right: 1200px;
+}
+
+.absolute {
+    background-color: #d580ff; /* Фіолетовий */
+    position: absolute;
+    top: 45px;
+    left: 500px;
+    z-index: 1;
+}
+
+.fixed {
+    background-color: #33ccff; /* Блакитний */
+    position: fixed;
+    right: 0;
+    width: 200px;
+    top: 40px;
+    left: 550px;
+    z-index: 2; /* Якщо цей індекс більше - елемент буде над іншими елементами з меншим індексом */
+}
+
+/* "box static" - статичне позиціонування (залиште за замовчуванням). */
+/* "box relative” - відносне позиціонування, змініть позицію за допомогою top, right, bottom, left. */
+/* "box absolute" - абсолютне позиціонування, встановіть позицію відносно контейнера "container". */
+/* "box fixed” - фіксоване позиціонування, так щоб блок залишався видимим навіть під час прокрутки сторінки. */
